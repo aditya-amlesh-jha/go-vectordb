@@ -60,6 +60,6 @@ func (list *DoublyLinkedList) GetHead() *ListNode {
 	return list.head
 }
 
-func (List *DoublyLinkedList) GetTail() *ListNode {
-	return List.tail
+func (list *DoublyLinkedList) GetTail() *ListNode {
+	return list.tail
 }
