@@ -3,11 +3,11 @@ package internal
 type ListNode struct {
 	next *ListNode
 	prev *ListNode
-	data interface{}
+	data string
 }
 
 type List interface {
-	AddNode(data interface{}) *ListNode
+	AddNode(data string) *ListNode
 	DeleteNode(node *ListNode) *ListNode
 	GetHead() *ListNode
 	GetTail() *ListNode
@@ -18,7 +18,7 @@ type DoublyLinkedList struct {
 	tail *ListNode
 }
 
-func (list *DoublyLinkedList) AddNode(data interface{}) *ListNode {
+func (list *DoublyLinkedList) AddNode(data string) *ListNode {
 	newNode := &ListNode{data: data}
 	if list.tail == nil {
 		list.head = newNode
